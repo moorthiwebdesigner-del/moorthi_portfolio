@@ -1,61 +1,140 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
+
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xve1ir7",
+        "template_r3bxmdg",
+        form.current,
+        "-cEqtfv-YP06hJ5vh"
+      )
+      .then(() => {
+        alert("✅ Message Sent Successfully!");
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("❌ Failed to send message. Please try again.");
+      });
+  };
+
   return (
-    <section id="contact" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="section bg-white">
+      <div className="container">
 
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase tracking-widest">
+          <span className="section-tag">
             Contact
-          </p>
+          </span>
 
-          <h2 className="text-5xl font-bold mt-4">
-            Let's Build Your Website
+          <h2 className="section-title">
+            Let's Build Your Next Website
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600">
-            Have a project in mind? Let's discuss your ideas.
+          <p className="section-desc mx-auto">
+            Have a project in mind? Send me a message and I'll get back to you
+            as soon as possible.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-10">
 
           {/* Left */}
+
           <div className="bg-slate-50 rounded-3xl p-10 shadow-lg">
 
             <h3 className="text-3xl font-bold mb-8">
               Contact Information
             </h3>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
 
-              <div>
-                <h4 className="font-semibold text-blue-600">
-                  📧 Email
-                </h4>
+              <div className="flex items-center gap-5">
 
-                <p className="text-gray-600">
-                  hello@moorthiwebstudio.com
-                </p>
+                <div className="bg-blue-600 text-white p-4 rounded-xl">
+                  <FaEnvelope size={22}/>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">
+                    Email
+                  </h4>
+
+                  <p className="text-gray-600">
+                    moorthiwebdesigner@gmail.com
+                  </p>
+
+                </div>
+
               </div>
 
-              <div>
-                <h4 className="font-semibold text-blue-600">
-                  📱 WhatsApp
-                </h4>
+              <div className="flex items-center gap-5">
 
-                <p className="text-gray-600">
-                  +91 XXXXX XXXXX
-                </p>
+                <div className="bg-green-600 text-white p-4 rounded-xl">
+                  <FaWhatsapp size={22}/>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">
+                    WhatsApp
+                  </h4>
+
+                  <p className="text-gray-600">
+                    +91 9629301506
+                  </p>
+
+                </div>
+
               </div>
 
-              <div>
-                <h4 className="font-semibold text-blue-600">
-                  📍 Location
-                </h4>
+              <div className="flex items-center gap-5">
 
-                <p className="text-gray-600">
-                  Tamil Nadu, India
-                </p>
+                <div className="bg-purple-600 text-white p-4 rounded-xl">
+                  <FaPhoneAlt size={22}/>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">
+                    Phone
+                  </h4>
+
+                  <p className="text-gray-600">
+                    +91 9629301506
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="flex items-center gap-5">
+
+                <div className="bg-red-600 text-white p-4 rounded-xl">
+                  <FaMapMarkerAlt size={22}/>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">
+                    Location
+                  </h4>
+
+                  <p className="text-gray-600">
+                    Chennai, Tamil Nadu, India
+                  </p>
+
+                </div>
+
               </div>
 
             </div>
@@ -63,34 +142,52 @@ function Contact() {
           </div>
 
           {/* Right */}
-          <form className="bg-slate-50 rounded-3xl p-10 shadow-lg space-y-6">
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="bg-slate-50 rounded-3xl p-10 shadow-lg"
+          >
+
+            <div className="grid md:grid-cols-2 gap-5">
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+
+            </div>
 
             <input
               type="text"
-              placeholder="Your Name"
-              className="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              name="subject"
+              placeholder="Subject"
+              required
+              className="w-full mt-5 p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
             <textarea
-              rows="5"
+              name="message"
+              rows="6"
               placeholder="Tell me about your project..."
-              className="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              required
+              className="w-full mt-5 p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
             ></textarea>
 
             <button
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold transition"
+              type="submit"
+              className="btn-primary w-full mt-6"
             >
               Send Message
             </button>

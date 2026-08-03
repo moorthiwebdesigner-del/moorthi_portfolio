@@ -6,6 +6,9 @@ import Projects from "./components/Projects";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsApp from "./components/WhatsApp";
+import ScrollTop from "./components/ScrollTop";
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
       <Pricing />
       <Contact />
       <Footer />
+      <ScrollTop />
+      <WhatsApp />
     </>
   );
 }

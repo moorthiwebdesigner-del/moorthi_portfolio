@@ -1,70 +1,145 @@
+import {
+  FaArrowRight,
+  FaReact,
+  FaWordpress,
+  FaShopify,
+} from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import FadeIn from "./FadeIn";
+
 function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 via-white to-blue-50 px-6 pt-24"
+      className="min-h-screen flex items-center pt-24 pb-16 bg-gradient-to-br from-slate-50 via-white to-blue-50"
     >
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold mb-8">
-          🚀 Welcome to Moorthi Web Studio
-        </div>
+        
+      <div className="container grid lg:grid-cols-2 gap-20 items-center">
 
-        {/* Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight text-gray-900">
-          Modern Websites
-          <br />
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-            For Growing Businesses
-          </span>
-        </h1>
+        {/* Left Content */}
+        <div className="max-w-xl">
+  <FadeIn>
 
-        {/* Description */}
-        <p className="mt-8 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-9">
-          I build premium business websites using{" "}
-          <span className="font-semibold text-blue-600">React</span>,
-          <span className="font-semibold text-blue-600"> WordPress</span>,
-          <span className="font-semibold text-blue-600"> WooCommerce</span>,
-          and
-          <span className="font-semibold text-blue-600"> Shopify</span>.
-          Fast, responsive and SEO-friendly websites that help businesses
-          generate more customers online.
-        </p>
+    <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold mb-6">
+      🚀 Professional Web Developer
+    </span>
 
-        {/* Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-          <a
-            href="#contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Get Free Consultation
-          </a>
+    <h1 className="text-5xl lg:text-5xl font-black leading-tight text-gray-900">
+      Grow Your Business With a
+      <span className="text-blue-600">
+        {" "}High-Converting Website
+      </span>
+    </h1>
 
-          <a
-            href="#projects"
-            className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
-          >
-            View Portfolio
-          </a>
-        </div>
+    <p className="mt-5 text-lg leading-8 text-gray-600 max-w-xl">
+      Modern websites built with React, WordPress & Shopify that help
+      businesses generate more leads and sales.
+    </p>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 transition-all duration-300">
-            <h2 className="text-4xl font-bold text-blue-600">10+</h2>
-            <p className="text-gray-600 mt-2">Technologies</p>
+    <div className="flex flex-wrap gap-4 mt-6">
+      <a
+        href="#contact"
+        className="btn-primary flex items-center gap-2"
+      >
+        Hire Me
+        <FaArrowRight />
+      </a>
+
+      <a
+        href="#projects"
+        className="btn-outline"
+      >
+        View Portfolio
+      </a>
+    </div>
+
+    {/* Tech Stack */}
+
+    <div className="flex flex-wrap gap-3 mt-12">
+
+      <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl shadow">
+        <FaReact className="text-cyan-500 text-2xl"/>
+        <span>React</span>
+      </div>
+
+      <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl shadow">
+        <FaWordpress className="text-blue-600 text-2xl"/>
+        <span>WordPress</span>
+      </div>
+
+      <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl shadow">
+        <FaShopify className="text-green-600 text-2xl"/>
+        <span>Shopify</span>
+      </div>
+
+      <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl shadow">
+        <SiMysql className="text-orange-600 text-2xl"/>
+        <span>MySQL</span>
+      </div>
+
+    </div>
+
+  </FadeIn>
+</div>
+
+        {/* Right Side */}
+
+        <div className="flex justify-center">
+
+          <div className="bg-white rounded-3xl shadow-xl p-10 w-full max-w-lg">
+
+            <div className="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center text-white text-4xl mx-auto">
+              💻
+            </div>
+
+            <h2 className="text-3xl font-bold text-center mt-6">
+              Moorthi
+            </h2>
+
+            <p className="text-center text-gray-500 mt-2">
+              Full Stack Web Developer
+            </p>
+
+            <div className="grid grid-cols-2 gap-5 mt-10">
+
+              <div className="bg-slate-50 rounded-2xl p-6 text-center">
+                <h3 className="text-3xl font-bold text-blue-600">
+                  4+
+                </h3>
+
+                <p>Platforms</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6 text-center">
+                <h3 className="text-3xl font-bold text-blue-600">
+                  100%
+                </h3>
+
+                <p>Responsive</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6 text-center">
+                <h3 className="text-3xl font-bold text-blue-600">
+                  SEO
+                </h3>
+
+                <p>Optimized</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6 text-center">
+                <h3 className="text-3xl font-bold text-blue-600">
+                  24/7
+                </h3>
+
+                <p>Support</p>
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 transition-all duration-300">
-            <h2 className="text-4xl font-bold text-blue-600">100%</h2>
-            <p className="text-gray-600 mt-2">Responsive Design</p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 transition-all duration-300">
-            <h2 className="text-4xl font-bold text-blue-600">24/7</h2>
-            <p className="text-gray-600 mt-2">Support Available</p>
-          </div>
         </div>
+
       </div>
     </section>
   );

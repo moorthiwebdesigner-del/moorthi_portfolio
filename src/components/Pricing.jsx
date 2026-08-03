@@ -1,18 +1,20 @@
+import { FaCheckCircle } from "react-icons/fa";
+
 const plans = [
   {
-    name: "Starter",
+    title: "Starter",
     price: "₹4,999",
     features: [
       "1-5 Pages Website",
       "Responsive Design",
       "Contact Form",
       "Basic SEO",
-      "Free Support (7 Days)",
+      "7 Days Support",
     ],
-    featured: false,
+    popular: false,
   },
   {
-    name: "Business",
+    title: "Business",
     price: "₹9,999",
     features: [
       "Up to 10 Pages",
@@ -21,10 +23,10 @@ const plans = [
       "Advanced SEO",
       "30 Days Support",
     ],
-    featured: true,
+    popular: true,
   },
   {
-    name: "Premium",
+    title: "Premium",
     price: "Custom",
     features: [
       "Unlimited Pages",
@@ -33,70 +35,102 @@ const plans = [
       "Admin Dashboard",
       "90 Days Support",
     ],
-    featured: false,
+    popular: false,
   },
 ];
 
 function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="pricing" className="section bg-slate-50">
+
+      <div className="container">
 
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase tracking-widest">
-            Pricing
-          </p>
 
-          <h2 className="text-5xl font-bold mt-3">
-            Affordable Packages
+          <span className="section-tag">
+            Pricing
+          </span>
+
+          <h2 className="section-title">
+            Affordable Website Packages
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg">
-            Choose the perfect package for your business.
+          <p className="section-desc mx-auto">
+            Choose a package that fits your business. Need something different?
+            Contact me for a custom quote.
           </p>
+
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {plans.map((plan, index) => (
+
             <div
               key={index}
-              className={`rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 ${
-                plan.featured
+              className={`relative rounded-3xl p-8 shadow-lg transition duration-300 hover:-translate-y-2 ${
+                plan.popular
                   ? "bg-blue-600 text-white scale-105"
                   : "bg-white"
               }`}
             >
+
+              {plan.popular && (
+                <span className="absolute top-5 right-5 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
+                  MOST POPULAR
+                </span>
+              )}
+
               <h3 className="text-3xl font-bold">
-                {plan.name}
+                {plan.title}
               </h3>
 
-              <h2 className="text-5xl font-black mt-5">
+              <h2 className="text-5xl font-black mt-4">
                 {plan.price}
               </h2>
 
-              <ul className="mt-8 space-y-4">
+              <div className="mt-8 space-y-4">
+
                 {plan.features.map((feature, i) => (
-                  <li key={i}>
-                    ✅ {feature}
-                  </li>
+
+                  <div
+                    key={i}
+                    className="flex items-center gap-3"
+                  >
+                    <FaCheckCircle
+                      className={
+                        plan.popular
+                          ? "text-green-300"
+                          : "text-green-500"
+                      }
+                    />
+
+                    <span>{feature}</span>
+
+                  </div>
+
                 ))}
-              </ul>
+
+              </div>
 
               <button
-                className={`mt-10 w-full py-4 rounded-xl font-semibold transition ${
-                  plan.featured
+                className={`w-full mt-10 py-4 rounded-xl font-bold transition ${
+                  plan.popular
                     ? "bg-white text-blue-600 hover:bg-gray-100"
                     : "bg-blue-600 text-white hover:bg-blue-700"
                 }`}
               >
                 Get Started
               </button>
+
             </div>
+
           ))}
 
         </div>
+
       </div>
+
     </section>
   );
 }

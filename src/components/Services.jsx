@@ -1,69 +1,78 @@
+import {
+  FaReact,
+  FaWordpress,
+  FaShoppingCart,
+  FaTools,
+  FaLaptopCode,
+} from "react-icons/fa";
+import { SiShopify } from "react-icons/si";
+
 const services = [
   {
+    icon: <FaLaptopCode size={38} className="text-blue-600" />,
     title: "Business Website",
-    description:
-      "Modern, responsive business websites that build trust and generate leads.",
-    icon: "🌐",
+    desc: "Professional responsive business websites that increase trust and generate more leads.",
   },
   {
+    icon: <FaReact size={38} className="text-cyan-500" />,
     title: "React Development",
-    description:
-      "Fast, dynamic React applications with modern UI and excellent performance.",
-    icon: "⚛️",
+    desc: "Modern React applications with high performance, clean UI and scalable architecture.",
   },
   {
+    icon: <FaWordpress size={38} className="text-blue-700" />,
     title: "WordPress",
-    description:
-      "Professional WordPress websites with easy content management.",
-    icon: "📝",
+    desc: "Custom WordPress websites with fast loading speed and easy content management.",
   },
   {
+    icon: <FaShoppingCart size={38} className="text-orange-500" />,
     title: "WooCommerce",
-    description:
-      "Complete online stores with secure checkout and product management.",
-    icon: "🛒",
+    desc: "Complete eCommerce websites with secure checkout and product management.",
   },
   {
+    icon: <SiShopify size={38} className="text-green-600" />,
     title: "Shopify Store",
-    description:
-      "Launch your Shopify store with a clean and conversion-focused design.",
-    icon: "🚀",
+    desc: "Launch a professional Shopify store designed to maximize sales and conversions.",
   },
   {
+    icon: <FaTools size={38} className="text-purple-600" />,
     title: "Website Maintenance",
-    description:
-      "Regular updates, backups, security checks, and ongoing support.",
-    icon: "🛠️",
+    desc: "Regular updates, backups, security monitoring and technical support for your website.",
   },
 ];
 
 function Services() {
   return (
-    <section id="services" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="services" className="section bg-slate-50">
+
+      <div className="container">
 
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase tracking-wider">
-            Services
-          </p>
 
-          <h2 className="text-5xl font-bold mt-3 text-gray-900">
-            What I Can Build
+          <span className="section-tag">
+            Services
+          </span>
+
+          <h2 className="section-title">
+            Services I Offer
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Professional web solutions designed to help businesses grow online.
+          <p className="section-desc mx-auto">
+            I build modern websites and web applications that help businesses
+            establish a strong online presence and attract more customers.
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => (
+
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2"
+              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 border border-gray-100"
             >
-              <div className="text-5xl mb-5">
+
+              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
                 {service.icon}
               </div>
 
@@ -71,14 +80,22 @@ function Services() {
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 leading-7">
-                {service.description}
+              <p className="text-gray-600 leading-8">
+                {service.desc}
               </p>
+
+              <button className="mt-8 text-blue-600 font-semibold hover:translate-x-1 transition">
+                Learn More →
+              </button>
+
             </div>
+
           ))}
 
         </div>
+
       </div>
+
     </section>
   );
 }

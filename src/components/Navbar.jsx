@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { FaCode } from "react-icons/fa";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   const links = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
@@ -13,46 +11,50 @@ function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full glass shadow-sm z-50">
-      <div className="container h-20 flex items-center justify-between">
-        <h1 className="text-3xl font-extrabold gradient-text">
-          Moorthi Web Studio
-        </h1>
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+      <div className="container flex items-center justify-between h-20">
 
-        <nav className="hidden md:flex gap-8">
+        {/* Logo */}
+        <a
+          href="#home"
+          className="flex items-center gap-3"
+        >
+          <div className="bg-blue-600 text-white p-3 rounded-xl">
+            <FaCode size={22} />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-extrabold">
+              Moorthi
+            </h2>
+
+            <p className="text-sm text-gray-500 -mt-1">
+              Web Studio
+            </p>
+          </div>
+        </a>
+
+        {/* Menu */}
+        <nav className="hidden md:flex gap-8 font-medium text-gray-700">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 transition"
+              className="hover:text-blue-600 transition"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
+        {/* Button */}
+        <a
+          href="#contact"
+          className="hidden md:inline-block btn-primary"
         >
-          ☰
-        </button>
+          Hire Me
+        </a>
       </div>
-
-      {menuOpen && (
-        <div className="md:hidden bg-white border-t">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block px-6 py-3 hover:bg-gray-100"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
     </header>
   );
 }
