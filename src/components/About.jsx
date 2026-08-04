@@ -1,143 +1,169 @@
 import {
   FaReact,
+  FaNodeJs,
   FaWordpress,
-  FaShopify,
+  FaDownload,
+  FaCheckCircle,
 } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
+
+import { SiPostgresql } from "react-icons/si";
+
+import FadeIn from "./FadeIn";
 
 function About() {
   return (
-    <section id="about" className="section bg-white">
-      <div className="container grid lg:grid-cols-2 gap-20 items-center">
+    <section
+      id="about"
+      className="py-24 bg-white"
+    >
+      <div className="container mx-auto max-w-7xl px-6">
 
-        {/* Left */}
+        <FadeIn>
 
-        <div>
+          <div className="text-center mb-16">
 
-          <span className="section-tag">
-            About Me
-          </span>
+            <p className="text-blue-600 font-semibold uppercase tracking-widest">
+              About Me
+            </p>
 
-          <h2 className="text-5xl font-black mt-3 leading-tight">
-            I Build Modern Websites That Help Businesses Grow
-          </h2>
-
-          <p className="section-desc">
-            I'm Moorthi, a passionate Full Stack Web Developer specializing
-            in React, WordPress, WooCommerce and Shopify.
-            My focus is building fast, responsive and SEO-friendly websites
-            that convert visitors into customers.
-          </p>
-
-          <div className="grid grid-cols-2 gap-5 mt-10">
-
-            <div className="card">
-              <h3 className="text-blue-600 text-4xl font-bold">
-                10+
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                Demo Projects
-              </p>
-            </div>
-
-            <div className="card">
-              <h3 className="text-blue-600 text-4xl font-bold">
-                100%
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                Responsive Design
-              </p>
-            </div>
+            <h2 className="text-5xl font-black mt-3">
+              Passionate Full Stack Developer
+            </h2>
 
           </div>
 
-        </div>
+        </FadeIn>
 
-        {/* Right */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        <div className="bg-slate-50 rounded-3xl p-10 shadow-xl">
+          {/* Left */}
 
-          <h3 className="text-3xl font-bold mb-8">
-            My Skills
-          </h3>
+          <FadeIn>
 
-          {/* React */}
+            <div className="flex justify-center">
 
-          <div className="mb-8">
+              <img
+                src="/profile.png"
+                alt="Moorthi"
+                className="rounded-3xl shadow-2xl"
+              />
 
-            <div className="flex justify-between mb-2">
-              <span className="flex items-center gap-2">
-                <FaReact className="text-cyan-500" />
+            </div>
+
+          </FadeIn>
+
+          {/* Right */}
+
+          <FadeIn>
+
+            <h3 className="text-4xl font-bold mb-6">
+              Hi, I'm Moorthi 👋
+            </h3>
+
+            <p className="text-gray-600 leading-8">
+              I'm a Full Stack Web Developer specializing in
+              React, Node.js, PostgreSQL, WordPress and Shopify.
+              I build modern, responsive and SEO-friendly websites
+              that help businesses grow online.
+            </p>
+
+            <p className="text-gray-600 leading-8 mt-5">
+              My focus is creating clean UI, scalable backend
+              applications and delivering high-quality solutions
+              with excellent user experience.
+            </p>
+
+            {/* Skills */}
+
+            <div className="grid grid-cols-2 gap-5 mt-10">
+
+              <div className="flex items-center gap-3">
+                <FaReact className="text-cyan-500 text-2xl"/>
                 React
-              </span>
+              </div>
 
-              <span>90%</span>
-            </div>
+              <div className="flex items-center gap-3">
+                <FaNodeJs className="text-green-500 text-2xl"/>
+                Node.js
+              </div>
 
-            <div className="w-full h-3 bg-gray-200 rounded-full">
-              <div className="w-[90%] h-3 bg-cyan-500 rounded-full"></div>
-            </div>
+              <div className="flex items-center gap-3">
+                <SiPostgresql className="text-sky-500 text-2xl"/>
+                PostgreSQL
+              </div>
 
-          </div>
-
-          {/* WordPress */}
-
-          <div className="mb-8">
-
-            <div className="flex justify-between mb-2">
-              <span className="flex items-center gap-2">
-                <FaWordpress className="text-blue-600" />
+              <div className="flex items-center gap-3">
+                <FaWordpress className="text-blue-500 text-2xl"/>
                 WordPress
-              </span>
+              </div>
 
-              <span>95%</span>
             </div>
 
-            <div className="w-full h-3 bg-gray-200 rounded-full">
-              <div className="w-[95%] h-3 bg-blue-600 rounded-full"></div>
+            {/* Stats */}
+
+            <div className="grid grid-cols-2 gap-6 mt-12">
+
+              <div className="bg-slate-50 rounded-2xl p-6">
+
+                <h2 className="text-4xl font-black text-blue-600">
+                  100+
+                </h2>
+
+                <p className="text-gray-500">
+                  Projects Completed
+                </p>
+
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6">
+
+                <h2 className="text-4xl font-black text-blue-600">
+                  15+
+                </h2>
+
+                <p className="text-gray-500">
+                  Years Experience
+                </p>
+
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6">
+
+                <h2 className="text-4xl font-black text-blue-600">
+                  65+
+                </h2>
+
+                <p className="text-gray-500">
+                  Happy Clients
+                </p>
+
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-6">
+
+                <h2 className="text-4xl font-black text-blue-600">
+                  24/7
+                </h2>
+
+                <p className="text-gray-500">
+                  Support
+                </p>
+
+              </div>
+
             </div>
 
-          </div>
+            <a
+              href="/moorthi_resume.pdf" target="_blank"
+              className="inline-flex items-center gap-3 mt-10 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition"
+            >
+              <FaDownload />
 
-          {/* Shopify */}
+              Download Resume
 
-          <div className="mb-8">
+            </a>
 
-            <div className="flex justify-between mb-2">
-              <span className="flex items-center gap-2">
-                <FaShopify className="text-green-600" />
-                Shopify
-              </span>
-
-              <span>85%</span>
-            </div>
-
-            <div className="w-full h-3 bg-gray-200 rounded-full">
-              <div className="w-[85%] h-3 bg-green-600 rounded-full"></div>
-            </div>
-
-          </div>
-
-          {/* MySQL */}
-
-          <div>
-
-            <div className="flex justify-between mb-2">
-              <span className="flex items-center gap-2">
-                <SiMysql className="text-orange-500" />
-                MySQL
-              </span>
-
-              <span>88%</span>
-            </div>
-
-            <div className="w-full h-3 bg-gray-200 rounded-full">
-              <div className="w-[88%] h-3 bg-orange-500 rounded-full"></div>
-            </div>
-
-          </div>
+          </FadeIn>
 
         </div>
 

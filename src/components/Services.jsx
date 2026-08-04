@@ -1,101 +1,161 @@
+import FadeIn from "./FadeIn";
+
 import {
+  FaLaptopCode,
   FaReact,
   FaWordpress,
-  FaShoppingCart,
-  FaTools,
-  FaLaptopCode,
+  FaShopify,
+  FaPaintBrush,
+  FaSearch,
 } from "react-icons/fa";
-import { SiShopify } from "react-icons/si";
-
-const services = [
-  {
-    icon: <FaLaptopCode size={38} className="text-blue-600" />,
-    title: "Business Website",
-    desc: "Professional responsive business websites that increase trust and generate more leads.",
-  },
-  {
-    icon: <FaReact size={38} className="text-cyan-500" />,
-    title: "React Development",
-    desc: "Modern React applications with high performance, clean UI and scalable architecture.",
-  },
-  {
-    icon: <FaWordpress size={38} className="text-blue-700" />,
-    title: "WordPress",
-    desc: "Custom WordPress websites with fast loading speed and easy content management.",
-  },
-  {
-    icon: <FaShoppingCart size={38} className="text-orange-500" />,
-    title: "WooCommerce",
-    desc: "Complete eCommerce websites with secure checkout and product management.",
-  },
-  {
-    icon: <SiShopify size={38} className="text-green-600" />,
-    title: "Shopify Store",
-    desc: "Launch a professional Shopify store designed to maximize sales and conversions.",
-  },
-  {
-    icon: <FaTools size={38} className="text-purple-600" />,
-    title: "Website Maintenance",
-    desc: "Regular updates, backups, security monitoring and technical support for your website.",
-  },
-];
 
 function Services() {
+  const services = [
+    {
+      icon: <FaLaptopCode size={42} />,
+      title: "Website Development",
+      desc: "Modern, responsive and high-performance business websites built with the latest technologies.",
+    },
+    {
+      icon: <FaReact size={42} />,
+      title: "React Development",
+      desc: "Fast, scalable and SEO-friendly React applications with beautiful responsive UI.",
+    },
+    {
+      icon: <FaWordpress size={42} />,
+      title: "WordPress Development",
+      desc: "Professional WordPress websites with custom themes, plugins and business solutions.",
+    },
+    {
+      icon: <FaShopify size={42} />,
+      title: "Shopify Store",
+      desc: "Premium Shopify eCommerce stores designed to increase online sales and conversions.",
+    },
+    {
+      icon: <FaPaintBrush size={42} />,
+      title: "UI / UX Design",
+      desc: "Clean, modern and user-friendly interface designs focused on better user experience.",
+    },
+    {
+      icon: <FaSearch size={42} />,
+      title: "SEO Optimization",
+      desc: "Optimize your website for Google ranking, speed, performance and better visibility.",
+    },
+  ];
+
   return (
-    <section id="services" className="section bg-slate-50">
+    <section
+      id="services"
+      className="py-24 bg-slate-50"
+    >
+      <div className="container mx-auto max-w-7xl px-6">
 
-      <div className="container">
+        {/* Heading */}
 
-        <div className="text-center mb-16">
+        <FadeIn>
 
-          <span className="section-tag">
-            Services
-          </span>
+          <div className="text-center mb-16">
 
-          <h2 className="section-title">
-            Services I Offer
-          </h2>
+            <p className="text-blue-600 font-semibold uppercase tracking-widest">
+              My Services
+            </p>
 
-          <p className="section-desc mx-auto">
-            I build modern websites and web applications that help businesses
-            establish a strong online presence and attract more customers.
-          </p>
+            <h2 className="text-5xl font-black mt-3 text-gray-900">
+              What I Can Do For You
+            </h2>
 
-        </div>
+            <p className="text-gray-500 mt-5 max-w-2xl mx-auto leading-8">
+              I build modern websites and web applications that help
+              businesses grow faster using the latest technologies.
+            </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+
+        </FadeIn>
+
+        {/* Cards */}
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {services.map((service, index) => (
 
-            <div
-              key={index}
-              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 border border-gray-100"
-            >
+            <FadeIn key={index}>
 
-              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
-                {service.icon}
+              <div
+                className="
+                group
+                h-full
+                flex
+                flex-col
+                bg-white
+                rounded-3xl
+                p-8
+                border
+                border-gray-100
+                shadow-md
+                hover:shadow-2xl
+                hover:-translate-y-3
+                transition-all
+                duration-300
+              "
+              >
+
+                {/* Icon */}
+
+                <div
+                  className="
+                  w-20
+                  h-20
+                  rounded-2xl
+                  bg-blue-100
+                  text-blue-600
+                  flex
+                  items-center
+                  justify-center
+                  group-hover:bg-blue-600
+                  group-hover:text-white
+                  transition
+                "
+                >
+                  {service.icon}
+                </div>
+
+                {/* Title */}
+
+                <h3 className="text-2xl font-bold mt-8 text-gray-900">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+
+                <p className="text-gray-600 leading-8 mt-5 flex-1">
+                  {service.desc}
+                </p>
+
+                {/* Button */}
+
+                <button
+                  className="
+                  mt-auto
+                  pt-8
+                  text-blue-600
+                  font-semibold
+                  group-hover:translate-x-2
+                  transition
+                "
+                >
+                  Learn More →
+                </button>
+
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-600 leading-8">
-                {service.desc}
-              </p>
-
-              <button className="mt-8 text-blue-600 font-semibold hover:translate-x-1 transition">
-                Learn More →
-              </button>
-
-            </div>
+            </FadeIn>
 
           ))}
 
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -1,133 +1,152 @@
+import FadeIn from "./FadeIn";
 import {
-  FaExternalLinkAlt,
   FaGithub,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 
-const projects = [
-  {
-    title: "Salon Website",
-    category: "Business Website",
-    image: "https://placehold.co/600x400/2563eb/ffffff?text=Salon+Website",
-  },
-  {
-    title: "Restaurant Website",
-    category: "React Website",
-    image: "https://placehold.co/600x400/f97316/ffffff?text=Restaurant",
-  },
-  {
-    title: "Gym Landing Page",
-    category: "Fitness",
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=Gym",
-  },
-  {
-    title: "Travel Agency",
-    category: "Travel",
-    image: "https://placehold.co/600x400/06b6d4/ffffff?text=Travel",
-  },
-  {
-    title: "Medical Clinic",
-    category: "Healthcare",
-    image: "https://placehold.co/600x400/9333ea/ffffff?text=Medical",
-  },
-  {
-    title: "E-Commerce Store",
-    category: "WooCommerce",
-    image: "https://placehold.co/600x400/e11d48/ffffff?text=E-Commerce",
-  },
-];
-
 function Projects() {
+  const projects = [
+    {
+      title: "Lead Generation CRM",
+      image: "/projects/crm.png",
+      description:
+        "A complete Lead Management CRM with Google Places API, Follow-ups, Dashboard, Analytics and Export features.",
+      tech: ["React", "Node.js", "PostgreSQL", "Google API"],
+      github: "https://github.com/moorthiwebdesigner-del/lead_generation_tool",
+      demo: "https://lead-generation-tool-ten.vercel.app/",
+    },
+
+    {
+      title: "Portfolio Website",
+      image: "/projects/portfolio.png",
+      description:
+        "Modern personal portfolio built with React, Tailwind CSS and premium responsive UI.",
+      tech: ["React", "Tailwind", "Vite"],
+      github: "https://github.com/moorthiwebdesigner-del/moorthi_portfolio",
+      demo: "https://moorthi-portfolio.vercel.app/",
+    },
+
+    {
+      title: "E-Commerce Website",
+      image: "/projects/ecommerce.png",
+      description:
+        "Responsive online shopping website with product catalog, cart and checkout UI.",
+      tech: ["Shopify", "Liquid", "CSS"],
+      github: "#",
+      demo: "#",
+    },
+  ];
+
   return (
     <section
       id="projects"
-      className="section bg-white"
+      className="py-24 bg-white"
     >
-      <div className="container">
+      <div className="container mx-auto max-w-7xl px-6">
 
         {/* Heading */}
 
-        <div className="text-center mb-16">
+        <FadeIn>
 
-          <span className="section-tag">
-            Portfolio
-          </span>
+          <div className="text-center mb-16">
 
-          <h2 className="section-title">
-            Recent Projects
-          </h2>
+            <p className="text-blue-600 uppercase font-semibold tracking-widest">
+              Portfolio
+            </p>
 
-          <p className="section-desc mx-auto">
-            Here are some sample websites that demonstrate my design,
-            development and responsive web skills.
-          </p>
+            <h2 className="text-5xl font-black mt-3">
+              Featured Projects
+            </h2>
 
-        </div>
+            <p className="text-gray-500 mt-5 max-w-2xl mx-auto">
+              A collection of modern web applications and websites
+              built using the latest technologies.
+            </p>
+
+          </div>
+
+        </FadeIn>
 
         {/* Cards */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-10 lg:grid-cols-3">
 
           {projects.map((project, index) => (
 
-            <div
-              key={index}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-3"
-            >
+            <FadeIn key={index}>
 
-              {/* Image */}
+              <div className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300 h-full flex flex-col">
 
-              <div className="overflow-hidden">
+                {/* Image */}
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-60 object-cover hover:scale-110 transition duration-500"
-                />
+                <div className="overflow-hidden">
 
-              </div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-60 object-cover group-hover:scale-110 transition duration-500"
+                  />
 
-              {/* Content */}
+                </div>
 
-              <div className="p-7">
+                {/* Content */}
 
-                <span className="inline-block bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full font-semibold">
-                  {project.category}
-                </span>
+                <div className="p-8 flex flex-col flex-1">
 
-                <h3 className="text-2xl font-bold mt-5">
-                  {project.title}
-                </h3>
+                  <h3 className="text-2xl font-bold">
+                    {project.title}
+                  </h3>
 
-                <p className="text-gray-600 leading-7 mt-4">
-                  Modern responsive website with clean UI,
-                  fast loading speed and SEO optimization.
-                </p>
+                  <p className="text-gray-600 mt-5 leading-7 flex-1">
+                    {project.description}
+                  </p>
 
-                {/* Buttons */}
+                  {/* Tech */}
 
-                <div className="flex gap-4 mt-8">
+                  <div className="flex flex-wrap gap-2 mt-6">
 
-                  <button className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition">
+                    {project.tech.map((item) => (
+                      <span
+                        key={item}
+                        className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium"
+                      >
+                        {item}
+                      </span>
+                    ))}
 
-                    <FaExternalLinkAlt />
+                  </div>
 
-                    Live Demo
+                  {/* Buttons */}
 
-                  </button>
+                  <div className="flex gap-4 mt-8">
 
-                  <button className="flex items-center gap-2 border border-blue-600 text-blue-600 px-5 py-3 rounded-xl hover:bg-blue-50 transition">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      className="flex-1 bg-blue-600 text-white py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-blue-700 transition"
+                    >
+                      <FaExternalLinkAlt />
 
-                    <FaGithub />
+                      Live Demo
+                    </a>
 
-                    GitHub
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="flex-1 border border-gray-300 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-100 transition"
+                    >
+                      <FaGithub />
 
-                  </button>
+                      GitHub
+                    </a>
+
+                  </div>
 
                 </div>
 
               </div>
 
-            </div>
+            </FadeIn>
 
           ))}
 

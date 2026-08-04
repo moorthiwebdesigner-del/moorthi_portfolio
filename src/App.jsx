@@ -3,7 +3,9 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
-import Pricing from "./components/Pricing";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import WhyChooseMe from "./components/WhyChooseMe";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
@@ -18,7 +20,9 @@ function App() {
       <About />
       <Services />
       <Projects />
-      <Pricing />
+      <Skills />
+      <Experience />
+      <WhyChooseMe />
       <Contact />
       <Footer />
       <ScrollTop />

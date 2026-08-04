@@ -3,148 +3,210 @@ import {
   FaLinkedin,
   FaInstagram,
   FaWhatsapp,
+  FaEnvelope,
   FaArrowUp,
+  FaHeart,
 } from "react-icons/fa";
 
 function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-950 text-white">
 
-      <div className="container py-16">
+      {/* Top Border */}
+      <div className="h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600"></div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+      {/* Main Footer */}
 
-          {/* Brand */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+
+          {/* ================= Left ================= */}
 
           <div>
 
-            <h2 className="text-3xl font-extrabold">
-              Moorthi
-              <span className="text-blue-500"> Web Studio</span>
-            </h2>
+            <div className="flex items-center gap-4">
 
-            <p className="mt-5 text-gray-400 leading-8">
-              I build modern, responsive and SEO-friendly websites using
-              React, WordPress, WooCommerce and Shopify.
+              <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-3xl font-black">
+                M
+              </div>
+
+              <div>
+
+                <h2 className="text-4xl font-black">
+                  Moorthi
+                </h2>
+
+                <p className="text-blue-400">
+                  Full Stack Web Developer
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="mt-8 text-gray-400 leading-8">
+              I build premium websites, CRM systems,
+              React applications, WordPress websites and
+              Shopify stores that help businesses grow
+              online.
             </p>
 
-          </div>
+            {/* Social */}
 
-          {/* Quick Links */}
-
-          <div>
-
-            <h3 className="text-xl font-bold mb-5">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-3">
-
-              <li><a href="#home" className="hover:text-blue-400">Home</a></li>
-
-              <li><a href="#about" className="hover:text-blue-400">About</a></li>
-
-              <li><a href="#services" className="hover:text-blue-400">Services</a></li>
-
-              <li><a href="#projects" className="hover:text-blue-400">Projects</a></li>
-
-              <li><a href="#pricing" className="hover:text-blue-400">Pricing</a></li>
-
-              <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
-
-            </ul>
-
-          </div>
-
-          {/* Services */}
-
-          <div>
-
-            <h3 className="text-xl font-bold mb-5">
-              Services
-            </h3>
-
-            <ul className="space-y-3 text-gray-400">
-
-              <li>React Development</li>
-
-              <li>WordPress Website</li>
-
-              <li>WooCommerce Store</li>
-
-              <li>Shopify Store</li>
-
-              <li>Business Website</li>
-
-            </ul>
-
-          </div>
-
-          {/* Social */}
-
-          <div>
-
-            <h3 className="text-xl font-bold mb-5">
-              Connect With Me
-            </h3>
-
-            <p className="text-gray-400">
-              Follow me on social media.
-            </p>
-
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-4 mt-10">
 
               <a
-                href="https://github.com/moorthiwebdesigner-del"
+                href="https://github.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-blue-600 flex items-center justify-center transition"
+                className="w-12 h-12 rounded-full bg-slate-800 hover:bg-blue-600 transition duration-300 flex items-center justify-center"
               >
-                <FaGithub size={20} />
+                <FaGithub />
               </a>
 
               <a
-                href="#"
-                className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-blue-600 flex items-center justify-center transition"
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 hover:bg-blue-600 transition duration-300 flex items-center justify-center"
               >
-                <FaLinkedin size={20} />
+                <FaLinkedin />
               </a>
 
               <a
-                href="#"
-                className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-pink-600 flex items-center justify-center transition"
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 hover:bg-pink-600 transition duration-300 flex items-center justify-center"
               >
-                <FaInstagram size={20} />
+                <FaInstagram />
               </a>
 
               <a
-                href="#"
-                className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-green-600 flex items-center justify-center transition"
+                href="https://wa.me/919629301506"
+                target="_blank"
+                rel="noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 hover:bg-green-600 transition duration-300 flex items-center justify-center"
               >
-                <FaWhatsapp size={20} />
+                <FaWhatsapp />
               </a>
 
             </div>
 
           </div>
 
+          {/* ================= Center ================= */}
+
+          <div className="lg:mx-auto">
+
+            <h3 className="text-2xl font-bold mb-8">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-5">
+
+              <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
+
+              <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
+
+              <li><a href="#services" className="hover:text-blue-400 transition">Services</a></li>
+
+              <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
+
+              <li><a href="#skills" className="hover:text-blue-400 transition">Skills</a></li>
+
+              <li><a href="#experience" className="hover:text-blue-400 transition">Experience</a></li>
+
+              <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
+
+            </ul>
+
+          </div>
+
+          {/* ================= Right ================= */}
+
+          <div className="lg:ml-auto">
+
+            <h3 className="text-2xl font-bold mb-8">
+              Contact
+            </h3>
+
+            <div className="space-y-6">
+
+              <div>
+
+                <p className="text-gray-500 text-sm">
+                  Phone
+                </p>
+
+                <p className="font-semibold mt-1">
+                  +91 9629301506
+                </p>
+
+              </div>
+
+              <div>
+
+                <p className="text-gray-500 text-sm">
+                  Email
+                </p>
+
+                <p className="font-semibold mt-1 break-all">
+                  moorthiwebdesigner@gmail.com
+                </p>
+
+              </div>
+
+              <div>
+
+                <p className="text-gray-500 text-sm">
+                  Location
+                </p>
+
+                <p className="font-semibold mt-1">
+                  Chennai, Tamil Nadu
+                </p>
+
+              </div>
+
+            </div>
+
+            <a
+              href="mailto:moorthiwebdesigner@gmail.com"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-6 py-4 rounded-xl font-semibold mt-10 transition"
+            >
+              <FaEnvelope />
+              Hire Me
+            </a>
+
+          </div>
+
         </div>
 
-        <hr className="border-slate-700 my-10" />
+      </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-5">
+      {/* Bottom */}
 
-          <p className="text-gray-400 text-center">
-            © {year} <strong>Moorthi Web Studio</strong>. All Rights Reserved.
+      <div className="border-t border-slate-800">
+
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-5">
+
+          <p className="text-gray-400 text-sm text-center">
+
+            © {new Date().getFullYear()} Moorthi.
+            Made with
+            <FaHeart className="inline text-red-500 mx-2" />
+            using React & Tailwind CSS.
+
           </p>
 
           <a
             href="#home"
-            className="bg-blue-600 hover:bg-blue-700 p-4 rounded-full transition"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition"
           >
             <FaArrowUp />
+            Back To Top
           </a>
 
         </div>
