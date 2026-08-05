@@ -18,7 +18,7 @@ function Hero() {
     <section
       id="home"
       className="
-      min-h-[calc(100vh-80px)]
+      min-h-screen
       flex
       items-center
       bg-gradient-to-br
@@ -26,8 +26,9 @@ function Hero() {
       via-blue-950
       to-slate-900
       overflow-hidden
-      pt-16
-      pb-12
+      pt-28
+      md:pt-12
+      pb-8
       "
     >
 
@@ -36,14 +37,14 @@ function Hero() {
       className="
       container
       mx-auto
-      px-6
+      px-5
+      md:px-6
       grid
       lg:grid-cols-2
       gap-12
       items-center
       "
       >
-
 
 
         {/* LEFT CONTENT */}
@@ -58,11 +59,12 @@ function Hero() {
           border
           border-blue-500/40
           text-blue-300
-          px-5
+          px-4
           py-2
           rounded-full
           font-semibold
-          text-sm
+          text-xs
+          md:text-sm
           "
           >
             🚀 Available for Opportunities
@@ -74,7 +76,7 @@ function Hero() {
           <h1
           className="
           mt-5
-          text-5xl
+          text-4xl
           md:text-6xl
           lg:text-7xl
           font-black
@@ -91,9 +93,7 @@ function Hero() {
               Moorthi A
             </span>
 
-
           </h1>
-
 
 
 
@@ -101,7 +101,7 @@ function Hero() {
           <h2
           className="
           mt-5
-          text-2xl
+          text-xl
           md:text-3xl
           font-bold
           text-gray-300
@@ -116,9 +116,7 @@ function Hero() {
               AI & Web Solutions Engineer
             </span>
 
-
           </h2>
-
 
 
 
@@ -127,7 +125,8 @@ function Hero() {
           className="
           mt-4
           max-w-xl
-          text-lg
+          text-base
+          md:text-lg
           leading-8
           text-gray-400
           "
@@ -144,14 +143,13 @@ function Hero() {
 
 
 
-
-          {/* Buttons */}
+          {/* BUTTONS */}
 
           <div
           className="
           flex
-          flex-wrap
-          gap-4
+          flex-row
+          gap-3
           mt-7
           "
           >
@@ -162,16 +160,20 @@ function Hero() {
             className="
             bg-blue-600
             hover:bg-blue-700
-            px-8
-            py-4
+            px-5
+            py-3
+            md:px-8
+            md:py-4
             rounded-xl
             text-white
             font-semibold
             flex
             items-center
-            gap-3
+            gap-2
             shadow-lg
             transition
+            text-sm
+            md:text-base
             "
             >
 
@@ -192,12 +194,16 @@ function Hero() {
             border
             border-gray-500
             text-white
-            px-8
-            py-4
+            px-5
+            py-3
+            md:px-8
+            md:py-4
             rounded-xl
             hover:bg-white
             hover:text-black
             transition
+            text-sm
+            md:text-base
             "
             >
 
@@ -213,7 +219,7 @@ function Hero() {
 
 
 
-          {/* Technology */}
+          {/* TECHNOLOGY */}
 
           <div
           className="
@@ -225,11 +231,12 @@ function Hero() {
           >
 
 
-            <Tech 
+            <Tech
             icon={<FaReact/>}
             name="React"
             color="text-cyan-400"
             />
+
 
             <Tech
             icon={<FaPhp/>}
@@ -270,9 +277,7 @@ function Hero() {
           </div>
 
 
-
         </FadeIn>
-
 
 
 
@@ -281,40 +286,31 @@ function Hero() {
 
         {/* RIGHT IMAGE */}
 
-        <FadeIn>
 
+        <FadeIn>
 
           <div
           className="
           flex
-          flex-col
+          justify-center
           items-center
           "
           >
 
 
+            <div className="relative">
 
-            <div
-            className="
-            relative
-            "
-            >
-
-
-              {/* Glow */}
 
               <div
               className="
               absolute
               inset-0
               bg-blue-500
-              blur-[120px]
+              blur-[100px]
               opacity-30
               rounded-full
               "
               />
-
-
 
 
               <div
@@ -334,7 +330,6 @@ function Hero() {
               "
               >
 
-
                 <img
                 src="/hero.png"
                 alt="Moorthi"
@@ -346,73 +341,10 @@ function Hero() {
                 "
                 />
 
-
               </div>
 
 
             </div>
-
-
-
-
-
-
-            {/* Stats Card */}
-
-
-            <div
-            className="
-            mt-8
-            w-full
-            max-w-lg
-            bg-white/10
-            backdrop-blur-xl
-            border
-            border-white/10
-            rounded-3xl
-            "
-            >
-
-
-              <div
-              className="
-              grid
-              grid-cols-4
-              "
-              >
-
-
-                <Stat
-                number="100+"
-                text="Websites"
-                />
-
-
-                <Stat
-                number="15+"
-                text="Years"
-                />
-
-
-                <Stat
-                number="10+"
-                text="Tech"
-                />
-
-
-                <Stat
-                number="AI"
-                text="Solutions"
-                />
-
-
-
-              </div>
-
-
-            </div>
-
-
 
 
           </div>
@@ -426,7 +358,6 @@ function Hero() {
 
 
     </section>
-
 
   );
 
@@ -448,7 +379,7 @@ function Tech({icon,name,color}){
     gap-2
     bg-white/10
     backdrop-blur-xl
-    px-4
+    px-3
     py-2
     rounded-xl
     text-white
@@ -461,57 +392,6 @@ function Tech({icon,name,color}){
       </span>
 
       {name}
-
-    </div>
-
-  );
-
-}
-
-
-
-
-
-
-function Stat({number,text}){
-
-
-  return (
-
-    <div
-    className="
-    py-5
-    text-center
-    border-r
-    border-white/10
-    "
-    >
-
-      <h3
-      className="
-      text-xl
-      md:text-2xl
-      font-bold
-      text-blue-400
-      "
-      >
-
-        {number}
-
-      </h3>
-
-
-      <p
-      className="
-      text-gray-300
-      text-xs
-      "
-      >
-
-        {text}
-
-      </p>
-
 
     </div>
 
