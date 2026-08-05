@@ -11,6 +11,8 @@ import {
 import FadeIn from "./FadeIn";
 
 
+
+
 function Hero() {
 
   return (
@@ -188,28 +190,26 @@ function Hero() {
 
 
             <a
-            href="/moorthi_resume.pdf"
-            target="_blank"
-            className="
-            border
-            border-gray-500
-            text-white
-            px-5
-            py-3
-            md:px-8
-            md:py-4
-            rounded-xl
-            hover:bg-white
-            hover:text-black
-            transition
-            text-sm
-            md:text-base
-            "
-            >
-
-              Download Resume
-
-            </a>
+href="/moorthi_resume.pdf"
+target="_blank"
+rel="noopener noreferrer"
+className="
+border
+border-gray-500
+text-white
+px-8
+py-4
+rounded-xl
+hover:bg-white
+hover:text-black
+transition
+inline-flex
+items-center
+justify-center
+"
+>
+Download Resume
+</a>
 
 
           </div>
@@ -287,70 +287,134 @@ function Hero() {
         {/* RIGHT IMAGE */}
 
 
-        <FadeIn>
+       {/* RIGHT IMAGE */}
 
-          <div
-          className="
-          flex
-          justify-center
-          items-center
-          "
-          >
+<FadeIn>
 
-
-            <div className="relative">
-
-
-              <div
-              className="
-              absolute
-              inset-0
-              bg-blue-500
-              blur-[100px]
-              opacity-30
-              rounded-full
-              "
-              />
+  <div
+  className="
+  flex
+  flex-col
+  justify-center
+  items-center
+  "
+  >
 
 
-              <div
-              className="
-              relative
-              w-64
-              h-64
-              md:w-80
-              md:h-80
-              lg:w-[390px]
-              lg:h-[390px]
-              rounded-full
-              border-[6px]
-              border-blue-500
-              overflow-hidden
-              shadow-[0_0_60px_rgba(37,99,235,0.5)]
-              "
-              >
-
-                <img
-                src="/hero.png"
-                alt="Moorthi"
-                className="
-                w-full
-                h-full
-                object-cover
-                object-top
-                "
-                />
-
-              </div>
+    <div className="relative">
 
 
-            </div>
+      {/* Glow */}
+
+      <div
+      className="
+      absolute
+      inset-0
+      bg-blue-500
+      blur-[100px]
+      opacity-30
+      rounded-full
+      "
+      />
 
 
-          </div>
+      {/* Image */}
+
+      <div
+      className="
+      relative
+      w-64
+      h-64
+      md:w-80
+      md:h-80
+      lg:w-[390px]
+      lg:h-[390px]
+      rounded-full
+      border-[6px]
+      border-blue-500
+      overflow-hidden
+      shadow-[0_0_60px_rgba(37,99,235,0.5)]
+      "
+      >
+
+        <img
+        src="/hero.png"
+        alt="Moorthi"
+        className="
+        w-full
+        h-full
+        object-cover
+        object-top
+        "
+        />
+
+      </div>
 
 
-        </FadeIn>
+    </div>
+
+
+
+
+    {/* Stats Card */}
+
+    <div
+    className="
+    mt-8
+    w-full
+    max-w-lg
+    bg-white/10
+    backdrop-blur-xl
+    border
+    border-white/10
+    rounded-3xl
+    overflow-hidden
+    "
+    >
+
+      <div
+      className="
+      grid
+      grid-cols-4
+      "
+      >
+
+
+        <Stat
+        number="100+"
+        text="Projects"
+        />
+
+
+        <Stat
+        number="15+"
+        text="Years"
+        />
+
+
+        <Stat
+        number="10+"
+        text="Tech"
+        />
+
+
+        <Stat
+        number="AI"
+        text="Solutions"
+        />
+
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+</FadeIn>
 
 
 
@@ -365,7 +429,52 @@ function Hero() {
 
 
 
+function Stat({number,text}){
 
+  return (
+
+    <div
+    className="
+    py-5
+    text-center
+    border-r
+    border-white/10
+    last:border-r-0
+    "
+    >
+
+      <h3
+      className="
+      text-lg
+      md:text-2xl
+      font-bold
+      text-blue-400
+      "
+      >
+
+        {number}
+
+      </h3>
+
+
+      <p
+      className="
+      text-gray-300
+      text-[11px]
+      md:text-xs
+      "
+      >
+
+        {text}
+
+      </p>
+
+
+    </div>
+
+  );
+
+}
 
 function Tech({icon,name,color}){
 
