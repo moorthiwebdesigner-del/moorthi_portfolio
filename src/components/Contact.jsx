@@ -48,7 +48,7 @@ function Contact() {
             </span>
 
             <h2 className="text-5xl font-black mt-5">
-              Let's Build Something Amazing
+             Let's Start Your Project
             </h2>
 
             <p className="text-gray-600 mt-6 max-w-2xl mx-auto leading-8">
@@ -71,7 +71,8 @@ function Contact() {
     <div>
 
       <span className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
-        🟢 Available for Freelance
+        🟢 Available for Opportunities
+
       </span>
 
       <h3 className="text-4xl font-black mt-6">
@@ -79,8 +80,9 @@ function Contact() {
       </h3>
 
       <p className="text-gray-600 leading-8 mt-5">
-        I help businesses build fast, modern and SEO-friendly
-        websites using React, Node.js, WordPress and Shopify.
+        I help businesses create modern digital
+solutions with beautiful design, powerful
+functionality and better user experience.
       </p>
 
       <div className="space-y-7 mt-10">
@@ -198,8 +200,8 @@ function Contact() {
         </h4>
 
         <p className="mt-3 leading-7 opacity-90">
-          Usually I reply within 30 minutes on WhatsApp and within
-          2 hours by email.
+        I usually respond quickly and
+will get back to you regarding your project requirements.
         </p>
 
       </div>
@@ -290,7 +292,7 @@ function Contact() {
         type="submit"
         className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-4 text-lg font-bold transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
       >
-        🚀 Send Message
+       Send Project Enquiry →
       </button>
 
     </div>

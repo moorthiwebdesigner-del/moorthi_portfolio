@@ -46,10 +46,10 @@ function Footer() {
             </div>
 
             <p className="mt-8 text-gray-400 leading-8">
-              I build premium websites, CRM systems,
-              React applications, WordPress websites and
-              Shopify stores that help businesses grow
-              online.
+              Creating modern digital experiences with
+clean design, powerful development and
+business-focused solutions.
+
             </p>
 
             {/* Social */}
@@ -57,7 +57,7 @@ function Footer() {
             <div className="flex gap-4 mt-10">
 
               <a
-                href="https://github.com/"
+                href="https://github.com/moorthiwebdesigner-del"
                 target="_blank"
                 rel="noreferrer"
                 className="w-12 h-12 rounded-full bg-slate-800 hover:bg-blue-600 transition duration-300 flex items-center justify-center"
@@ -66,7 +66,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/moorthi-arumugam-1aa3a229/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-12 h-12 rounded-full bg-slate-800 hover:bg-blue-600 transition duration-300 flex items-center justify-center"
@@ -75,7 +75,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/moorthiweb/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-12 h-12 rounded-full bg-slate-800 hover:bg-pink-600 transition duration-300 flex items-center justify-center"
@@ -104,7 +104,7 @@ function Footer() {
               Quick Links
             </h3>
 
-            <ul className="space-y-5">
+            <ul className="space-y-4">
 
               <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
 
@@ -165,7 +165,7 @@ function Footer() {
                 </p>
 
                 <p className="font-semibold mt-1">
-                  Chennai, Tamil Nadu
+                  Tamil Nadu, India
                 </p>
 
               </div>
@@ -194,20 +194,11 @@ function Footer() {
 
           <p className="text-gray-400 text-sm text-center">
 
-            © {new Date().getFullYear()} Moorthi.
-            Made with
-            <FaHeart className="inline text-red-500 mx-2" />
-            using React & Tailwind CSS.
+            © {new Date().getFullYear()} Moorthi Portfolio. All Rights Reserved.
 
           </p>
 
-          <a
-            href="#home"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition"
-          >
-            <FaArrowUp />
-            Back To Top
-          </a>
+          
 
         </div>
 

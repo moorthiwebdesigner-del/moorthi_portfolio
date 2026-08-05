@@ -1,175 +1,407 @@
 import {
   FaReact,
-  FaNodeJs,
+  FaPhp,
+  FaDatabase,
   FaWordpress,
+  FaRobot,
   FaDownload,
   FaCheckCircle,
 } from "react-icons/fa";
 
-import { SiPostgresql } from "react-icons/si";
-
 import FadeIn from "./FadeIn";
 
+
 function About() {
+
   return (
+
     <section
       id="about"
-      className="py-24 bg-white"
+      className="
+      py-20
+      bg-white
+      "
     >
-      <div className="container mx-auto max-w-7xl px-6">
+
+      <div
+      className="
+      container
+      mx-auto
+      max-w-7xl
+      px-6
+      ">
+
+
+        {/* Heading */}
 
         <FadeIn>
 
-          <div className="text-center mb-16">
+          <div
+          className="
+          text-center
+          mb-14
+          "
+          >
 
-            <p className="text-blue-600 font-semibold uppercase tracking-widest">
+            <p
+            className="
+            text-blue-600
+            font-semibold
+            uppercase
+            tracking-widest
+            "
+            >
               About Me
             </p>
 
-            <h2 className="text-5xl font-black mt-3">
-              Passionate Full Stack Developer
+
+            <h2
+            className="
+            text-4xl
+            md:text-5xl
+            font-black
+            mt-3
+            "
+            >
+              My Journey & Expertise
             </h2>
+
 
           </div>
 
+
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left */}
+
+
+
+
+
+        <div
+        className="
+        grid
+        lg:grid-cols-2
+        gap-14
+        items-center
+        ">
+
+
+          {/* Image */}
 
           <FadeIn>
 
-            <div className="flex justify-center">
+            <div
+            className="
+            flex
+            justify-center
+            "
+            >
 
-              <img
+              <div
+              className="
+              relative
+              "
+              >
+
+
+                <div
+                className="
+                absolute
+                inset-0
+                bg-blue-500
+                blur-3xl
+                opacity-20
+                rounded-3xl
+                "
+                />
+
+
+                <img
                 src="/profile.png"
                 alt="Moorthi"
-                className="rounded-3xl shadow-2xl"
-              />
+                className="
+                relative
+                rounded-3xl
+                shadow-2xl
+                max-w-md
+                "
+                />
+
+
+              </div>
+
 
             </div>
+
 
           </FadeIn>
 
-          {/* Right */}
+
+
+
+
+
+
+
+          {/* Content */}
 
           <FadeIn>
 
-            <h3 className="text-4xl font-bold mb-6">
+
+            <h3
+            className="
+            text-3xl
+            font-bold
+            mb-5
+            "
+            >
+
               Hi, I'm Moorthi 👋
+
             </h3>
 
-            <p className="text-gray-600 leading-8">
-              I'm a Full Stack Web Developer specializing in
-              React, Node.js, PostgreSQL, WordPress and Shopify.
-              I build modern, responsive and SEO-friendly websites
-              that help businesses grow online.
+
+
+
+
+            <p
+            className="
+            text-gray-600
+            leading-8
+            "
+            >
+
+              My journey started with web design and
+              gradually evolved into full stack
+              development. I enjoy creating modern,
+              responsive and user-friendly digital
+              solutions.
+
             </p>
 
-            <p className="text-gray-600 leading-8 mt-5">
-              My focus is creating clean UI, scalable backend
-              applications and delivering high-quality solutions
-              with excellent user experience.
+
+
+
+
+            <p
+            className="
+            text-gray-600
+            leading-8
+            mt-5
+            "
+            >
+
+              I work on business websites, CRM systems,
+              eCommerce platforms and custom web
+              applications by combining clean UI,
+              efficient backend solutions and modern
+              technologies.
+
             </p>
 
-            {/* Skills */}
 
-            <div className="grid grid-cols-2 gap-5 mt-10">
 
-              <div className="flex items-center gap-3">
-                <FaReact className="text-cyan-500 text-2xl"/>
-                React
-              </div>
 
-              <div className="flex items-center gap-3">
-                <FaNodeJs className="text-green-500 text-2xl"/>
-                Node.js
-              </div>
 
-              <div className="flex items-center gap-3">
-                <SiPostgresql className="text-sky-500 text-2xl"/>
-                PostgreSQL
-              </div>
 
-              <div className="flex items-center gap-3">
-                <FaWordpress className="text-blue-500 text-2xl"/>
-                WordPress
-              </div>
+            {/* Expertise */}
+
+            <div
+            className="
+            mt-8
+            space-y-4
+            "
+            >
+
+
+              <Expertise text="Frontend Development (React.js)" />
+
+
+              <Expertise text="Backend Development (PHP & API)" />
+
+
+              <Expertise text="Database Solutions (MySQL)" />
+
+
+              <Expertise text="CMS & AI Integration Solutions" />
+
+
 
             </div>
 
-            {/* Stats */}
 
-            <div className="grid grid-cols-2 gap-6 mt-12">
 
-              <div className="bg-slate-50 rounded-2xl p-6">
 
-                <h2 className="text-4xl font-black text-blue-600">
-                  100+
-                </h2>
 
-                <p className="text-gray-500">
-                  Projects Completed
-                </p>
 
-              </div>
 
-              <div className="bg-slate-50 rounded-2xl p-6">
+            {/* Technology Cards */}
 
-                <h2 className="text-4xl font-black text-blue-600">
-                  15+
-                </h2>
+            <div
+            className="
+            grid
+            grid-cols-2
+            gap-4
+            mt-10
+            "
+            >
 
-                <p className="text-gray-500">
-                  Years Experience
-                </p>
 
-              </div>
+              <Skill
+              icon={<FaReact/>}
+              name="React.js"
+              color="text-cyan-500"
+              />
 
-              <div className="bg-slate-50 rounded-2xl p-6">
 
-                <h2 className="text-4xl font-black text-blue-600">
-                  65+
-                </h2>
+              <Skill
+              icon={<FaPhp/>}
+              name="PHP"
+              color="text-purple-500"
+              />
 
-                <p className="text-gray-500">
-                  Happy Clients
-                </p>
 
-              </div>
+              <Skill
+              icon={<FaDatabase/>}
+              name="MySQL"
+              color="text-yellow-500"
+              />
 
-              <div className="bg-slate-50 rounded-2xl p-6">
 
-                <h2 className="text-4xl font-black text-blue-600">
-                  24/7
-                </h2>
+              <Skill
+              icon={<FaWordpress/>}
+              name="WordPress"
+              color="text-blue-500"
+              />
 
-                <p className="text-gray-500">
-                  Support
-                </p>
 
-              </div>
+              <Skill
+              icon={<FaRobot/>}
+              name="AI Integration"
+              color="text-pink-500"
+              />
+
+
 
             </div>
+
+
+
+
+
+
+
+
+            {/* Resume Button */}
 
             <a
-              href="/moorthi_resume.pdf" target="_blank"
-              className="inline-flex items-center gap-3 mt-10 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition"
+            href="/moorthi_resume.pdf"
+            target="_blank"
+            className="
+            inline-flex
+            items-center
+            gap-3
+            mt-10
+            bg-blue-600
+            text-white
+            px-8
+            py-4
+            rounded-xl
+            font-semibold
+            hover:bg-blue-700
+            transition
+            "
             >
-              <FaDownload />
+
+              <FaDownload/>
 
               Download Resume
 
             </a>
 
+
+
           </FadeIn>
+
+
 
         </div>
 
+
       </div>
+
+
     </section>
+
   );
+
 }
+
+
+
+
+
+function Expertise({text}){
+
+  return(
+
+    <div
+    className="
+    flex
+    items-center
+    gap-3
+    text-gray-700
+    "
+    >
+
+      <FaCheckCircle
+      className="
+      text-blue-600
+      "
+      />
+
+      {text}
+
+    </div>
+
+  );
+
+}
+
+
+
+
+
+function Skill({icon,name,color}){
+
+  return(
+
+    <div
+    className="
+    flex
+    items-center
+    gap-3
+    bg-slate-50
+    p-4
+    rounded-xl
+    font-semibold
+    "
+    >
+
+      <span
+      className={`${color} text-xl`}
+      >
+        {icon}
+      </span>
+
+      {name}
+
+    </div>
+
+  );
+
+}
+
 
 export default About;

@@ -1,48 +1,47 @@
 import FadeIn from "./FadeIn";
 
 function Experience() {
-  const timeline = [
-    {
-      year: "2010",
-      title: "Web Designer",
-      company: "Racy Web Solutions",
-      description:
-        "Started my professional career designing responsive websites, landing pages and UI layouts.",
-    },
+ const timeline = [
+  {
+    year: "2010",
+    title: "Web Designer",
+    company: "Racy Web Solutions",
+    description:
+      "Started professional journey creating website layouts, landing pages and creative UI designs for business websites.",
+  },
 
-    {
-      year: "2011 - 2014",
-      title: "Senior Designer",
-      company: "MBW Techimpex Pvt Ltd",
-      description:
-        "Worked on web design, branding, UI development and business website projects.",
-    },
+  {
+    year: "2011 - 2014",
+    title: "Senior Web Designer",
+    company: "MBW Techimpex Pvt Ltd",
+    description:
+      "Designed responsive websites, branding materials and user-focused web interfaces for various business clients.",
+  },
 
-    {
-      year: "2014 - 2020",
-      title: "Senior Web Designer",
-      company: "Best Rankers Internet Technologies Pvt Ltd",
-      description:
-        "Delivered 100+ business websites, responsive layouts, WordPress themes, landing pages and branding solutions.",
-    },
+  {
+    year: "2014 - 2020",
+    title: "Senior Web Designer",
+    company: "Best Rankers Internet Technologies Pvt Ltd",
+    description:
+      "Developed 100+ business websites with responsive design, WordPress solutions, landing pages and SEO-friendly layouts.",
+  },
 
-    {
-      year: "2021 - 2024",
-      title: "Senior Web Developer",
-      company: "Hubra Digital LLP",
-      description:
-        "Built WordPress websites, Shopify stores, PHP applications, API integrations and SEO optimized business websites.",
-    },
+  {
+    year: "2021 - 2024",
+    title: "Senior Web Developer",
+    company: "Hubra Digital LLP",
+    description:
+      "Worked on PHP applications, WordPress websites, Shopify stores, API integration and performance optimization.",
+  },
 
-    {
-      year: "2024 - Present",
-      title: "Senior Full Stack Developer",
-      company: "Freelancer",
-      description:
-        "Developing React, Node.js, WordPress, Shopify, AI powered web applications and custom business solutions.",
-    },
-  ];
-
+  {
+    year: "2024 - Present",
+    title: "Full Stack Developer & Freelancer",
+    company: "Independent Projects",
+    description:
+      "Building React applications, CRM systems, AI integrations and custom digital solutions for businesses.",
+  },
+];
   return (
     <section
       id="experience"
