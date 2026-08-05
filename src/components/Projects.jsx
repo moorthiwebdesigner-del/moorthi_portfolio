@@ -13,42 +13,53 @@ const projects = [
  title:"Lead Management CRM",
  image:"/projects/crm.png",
  description:"CRM system with lead tracking, dashboard and analytics.",
- tech:["React","PHP","MySQL"]
+ tech:["React","PHP","MySQL"],
+  demo: "#"
 },
 
 {
  title:"Portfolio Website",
  image:"/projects/portfolio.png",
  description:"Modern developer portfolio with responsive UI.",
- tech:["React","Tailwind","Vite"]
+ tech:["React","Tailwind","Vite"],
+  demo: "#"
 },
 
 {
  title:"E-Commerce Solution",
  image:"/projects/ecommerce.png",
  description:"Online shopping platform with product management.",
- tech:["Shopify","WooCommerce"]
+ tech:["Shopify",
+    "Liquid",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Payment Gateway"],
+     demo: "#"
 },
 
 {
  title:"School Management Website",
  image:"/projects/school.png",
  description:"Educational website with CMS and SEO optimization.",
- tech:["WordPress","SEO"]
+ tech:["WordPress","SEO"],
+  demo: "#"
 },
 
 {
  title:"Corporate Business Website",
  image:"/projects/business.png",
  description:"Professional company website with modern design.",
- tech:["React","Bootstrap"]
+ tech:["React","Bootstrap"],
+  demo: "#"
 },
 
 {
  title:"AI Automation Tool",
  image:"/projects/ai.png",
  description:"AI powered automation and business solutions.",
- tech:["AI","API","PHP"]
+ tech:["AI","API","PHP"],
+  demo: "#"
 }
 ];
 
@@ -191,7 +202,7 @@ alt={project.title}
 
 className="
 w-full
-h-56
+h-75
 object-cover
 group-hover:scale-110
 transition
@@ -334,7 +345,7 @@ transition
 
 <FaExternalLinkAlt/>
 
-Demo
+Live
 
 </a>
 
@@ -342,33 +353,7 @@ Demo
 
 
 
-<a
 
-href={project.github}
-
-target="_blank"
-
-className="
-flex-1
-border
-border-gray-300
-py-3
-rounded-xl
-flex
-items-center
-justify-center
-gap-2
-hover:bg-gray-100
-transition
-"
-
->
-
-<FaGithub/>
-
-Code
-
-</a>
 
 
 

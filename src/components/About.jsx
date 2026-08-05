@@ -91,48 +91,39 @@ function About() {
 
           <FadeIn>
 
-            <div
-            className="
-            flex
-            justify-center
-            "
-            >
+            <div className="flex justify-center w-full">
 
-              <div
-              className="
-              relative
-              "
-              >
+  <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
 
-
-                <div
-                className="
-                absolute
-                inset-0
-                bg-blue-500
-                blur-3xl
-                opacity-20
-                rounded-3xl
-                "
-                />
+    {/* Glow */}
+    <div
+      className="
+      absolute
+      inset-0
+      bg-blue-500
+      blur-3xl
+      opacity-20
+      rounded-3xl
+      "
+    ></div>
 
 
-                <img
-                src="/profile.png"
-                alt="Moorthi"
-                className="
-                relative
-                rounded-3xl
-                shadow-2xl
-                max-w-md
-                "
-                />
+    <img
+      src="/profile.png"
+      alt="Moorthi"
+      className="
+        relative
+        w-full
+        h-auto
+        rounded-3xl
+        shadow-2xl
+        object-cover
+      "
+    />
 
+  </div>
 
-              </div>
-
-
-            </div>
+</div>
 
 
           </FadeIn>
