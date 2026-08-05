@@ -6,17 +6,17 @@ import App from "./App.jsx";
 import { registerSW } from "virtual:pwa-register";
 
 
-// PWA Service Worker
 registerSW({
+  immediate: true,
+
   onNeedRefresh() {
-    console.log("New content available");
+    console.log("New version available");
   },
 
   onOfflineReady() {
-    console.log("App ready for offline use");
-  },
+    console.log("App ready offline");
+  }
 });
-
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
