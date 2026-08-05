@@ -186,7 +186,7 @@ function Hero() {
 
 
             <a
-            href="/resume.pdf"
+            href="/moorthi_resume.pdf"
             target="_blank"
             className="
             border
