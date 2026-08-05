@@ -15,8 +15,8 @@ import ScrollTop from "./components/ScrollTop";
 function App() {
   return (
     <>
+     <Hero />
       <Navbar />
-      <Hero />
       <About />
       <Services />
       <Projects />
