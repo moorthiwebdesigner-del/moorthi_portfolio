@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 import FadeIn from "./FadeIn";
-
+import profile from "../assets/profile.png";
 
 function About() {
 
@@ -109,7 +109,7 @@ function About() {
 
 
     <img
-      src="/profile.png"
+      src={profile}
       alt="Moorthi"
       className="
         relative

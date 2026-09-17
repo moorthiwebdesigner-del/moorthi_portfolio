@@ -6,6 +6,8 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
 
+    base: "/portfolio/",
+
   plugins: [
 
     react(),
@@ -25,7 +27,8 @@ export default defineConfig({
 
 
       manifest: {
-
+         id: "/portfolio/",
+         
         name: "Moorthi Dev | Full Stack Developer",
 
         short_name: "Moorthi Dev",
@@ -34,9 +37,9 @@ export default defineConfig({
           "Professional Full Stack Developer Portfolio - React, PHP, MySQL, WordPress, Shopify and AI Solutions.",
 
 
-        start_url: "/",
+        start_url: "/portfolio/",
 
-        scope: "/",
+        scope: "/portfolio/",
 
 
         display: "standalone",
@@ -53,7 +56,7 @@ export default defineConfig({
         icons: [
 
           {
-            src: "/pwa-192.png",
+            src: "pwa-192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any"
@@ -61,7 +64,7 @@ export default defineConfig({
 
 
           {
-            src: "/pwa-512.png",
+            src: "pwa-512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any"
@@ -69,7 +72,7 @@ export default defineConfig({
 
 
           {
-            src: "/maskable-icon.png",
+            src: "maskable-icon.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable"
@@ -83,10 +86,10 @@ export default defineConfig({
           {
             name: "Projects",
             short_name: "Projects",
-            url: "/#projects",
+            url: "/portfolio/#projects",
             icons:[
               {
-                src:"/pwa-192.png",
+                src:"pwa-192.png",
                 sizes:"192x192"
               }
             ]
@@ -96,10 +99,10 @@ export default defineConfig({
           {
             name: "Contact",
             short_name: "Contact",
-            url: "/#contact",
+            url: "/portfolio/#contact",
             icons:[
               {
-                src:"/pwa-192.png",
+                src:"pwa-192.png",
                 sizes:"192x192"
               }
             ]
@@ -109,10 +112,10 @@ export default defineConfig({
           {
             name: "Skills",
             short_name: "Skills",
-            url: "/#skills",
+            url: "/portfolio/#skills",
             icons:[
               {
-                src:"/pwa-192.png",
+                src:"pwa-192.png",
                 sizes:"192x192"
               }
             ]

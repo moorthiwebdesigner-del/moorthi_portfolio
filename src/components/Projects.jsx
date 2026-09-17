@@ -4,62 +4,68 @@ import {
   FaGithub,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-
+import mr from "../assets/projects/1.png";
+import mi from "../assets/projects/2.png";
+import smc from "../assets/projects/3.png";
+import el from "../assets/projects/4.png";
+import sh from "../assets/projects/5.png";
+import ai from "../assets/projects/6.png";
 
 function Projects() {
 
 const projects = [
 {
- title:"Lead Management CRM",
- image:"/projects/crm.png",
- description:"CRM system with lead tracking, dashboard and analytics.",
- tech:["React","PHP","MySQL"],
+  title: "MR.1989 | Premium Leather",
+  image: mr,
+  description:
+    "A premium e-commerce platform created for MR.1989, showcasing leather products through a refined digital experience with seamless navigation, responsive design, and a strong brand presence.",
+  tech: ["WooCommerce", "WordPress", "PHP", "MySQL", "Payment Gateway"],
+  demo: "https://mr1989.in/"
+},
+
+{
+  title: "Mirra Clothing | Premium Women's Fashion",
+  image: mi,
+  description:
+    "A stylish e-commerce experience designed for Mirra Clothing, combining elegant visual presentation, intuitive navigation, responsive design, and a seamless shopping experience.",
+  tech: ["WooCommerce", "WordPress", "PHP", "MySQL", "Payment Gateway"],
+  demo: "https://www.mirraclothing.com/"
+},
+
+{
+  title: "School Management CRM",
+  image: smc,
+  description:
+    "A smart school management CRM designed to simplify administration, streamline daily operations, and provide an intuitive digital experience for educational institutions.",
+  tech: ["React Native", "Expo"],
   demo: "#"
 },
 
 {
- title:"Portfolio Website",
- image:"/projects/portfolio.png",
- description:"Modern developer portfolio with responsive UI.",
- tech:["React","Tailwind","Vite"],
-  demo: "#"
+  title: "Everything Law Professional Corporation",
+  image: el,
+  description:
+    "A professional legal website designed to present legal services with clarity and credibility, delivering an intuitive and responsive experience across desktop and mobile devices.",
+  tech: ["PHP", "HTML", "CSS"],
+  demo: "https://everythinglaw.ca/"
 },
 
 {
- title:"E-Commerce Solution",
- image:"/projects/ecommerce.png",
- description:"Online shopping platform with product management.",
- tech:["Shopify",
-    "Liquid",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "Payment Gateway"],
-     demo: "#"
+  title: "Shree Color Coats",
+  image: sh,
+  description:
+    "A modern corporate website designed for Shree Color Coats, presenting its powder coating solutions, services, manufacturing capabilities, and business information through a clean and professional digital experience.",
+  tech: ["HTML", "Bootstrap", "CSS"],
+  demo: "https://www.shreecolorcoats.com/"
 },
 
 {
- title:"School Management Website",
- image:"/projects/school.png",
- description:"Educational website with CMS and SEO optimization.",
- tech:["WordPress","SEO"],
-  demo: "#"
-},
-
-{
- title:"Corporate Business Website",
- image:"/projects/business.png",
- description:"Professional company website with modern design.",
- tech:["React","Bootstrap"],
-  demo: "#"
-},
-
-{
- title:"AI Automation Tool",
- image:"/projects/ai.png",
- description:"AI powered automation and business solutions.",
- tech:["AI","API","PHP"],
-  demo: "#"
+  title: "LUXOR SHIELD",
+  image: ai,
+  description:
+    "A premium corporate website designed for LUXOR SHIELD, showcasing its advanced powder coating solutions, premium finishes, manufacturing expertise, and surface protection capabilities through a modern and responsive digital experience.",
+  tech: ["HTML", "Bootstrap", "CSS"],
+  demo: "https://luxorshield.com/"
 }
 ];
 

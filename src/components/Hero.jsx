@@ -10,7 +10,7 @@ import {
 
 import FadeIn from "./FadeIn";
 
-
+import heroImg from "../assets/hero.png";
 
 
 function Hero() {
@@ -189,28 +189,27 @@ function Hero() {
 
 
 
-            <a
-href="/moorthi_resume.pdf"
-target="_blank"
-rel="noopener noreferrer"
-className="
-border
-border-gray-500
-text-white
-px-8
-py-4
-rounded-xl
-hover:bg-white
-hover:text-black
-transition
-inline-flex
-items-center
-justify-center
-"
+          <a
+  href={`${import.meta.env.BASE_URL}moorthi_resume.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    border
+    border-gray-500
+    text-white
+    px-8
+    py-4
+    rounded-xl
+    hover:bg-white
+    hover:text-black
+    transition
+    inline-flex
+    items-center
+    justify-center
+  "
 >
-Download Resume
+  Download Resume
 </a>
-
 
           </div>
 
@@ -338,7 +337,7 @@ Download Resume
       >
 
         <img
-        src="/hero.png"
+        src={heroImg}
         alt="Moorthi"
         className="
         w-full
